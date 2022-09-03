@@ -1,0 +1,215 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+
+
+type Profile @model @auth(rules: [
+  { allow: owner, operations: [create, read, update] },
+  { allow: groups, groups: ["Admin"] }
+] ){
+  id: ID!
+  first_name: String!
+  last_name: String!
+  address: String!
+  addressTwo: String
+  city: String!
+  state: String!
+  zipcode: String!
+  email: String!
+  phone: String!
+  ssn: String!
+  dl_number: String!
+  profile_path: String
+  profile_status: String
+  fee_background_paid: Int
+  fee_monthly_paid: Int
+  host_q1a: Boolean
+  host_q1b: Boolean
+  host_q1c: Boolean
+  host_q1d: Boolean
+  host_q1e: Boolean
+  host_q1f: Boolean
+  host_q2: String
+  host_q3: String
+  host_q4: String
+  host_q5a: Boolean
+  host_q5b: Boolean
+  host_q5c: Boolean
+  host_q5d: Boolean
+  host_q5e: Boolean
+  host_q5f: Boolean
+  host_q5g: Boolean
+  host_q6: String
+  host_q7a: Boolean
+  host_q7b: Boolean
+  host_q7c: Boolean
+  host_q7d: Boolean
+  host_q7e: Boolean
+  host_q7f: Boolean
+  host_q7g: Boolean
+  host_q7h: Boolean
+  host_q7i: Boolean
+  host_q7j: Boolean
+  host_q7k: Boolean
+  host_q7l: Boolean
+  host_q7m: Boolean
+  host_q7n: Boolean
+  host_q8: String
+  host_q9: String
+  host_q10: String
+  host_q11: String
+  host_q12a: Boolean
+  host_q12b: Boolean
+  host_q12c: Boolean
+  host_q12d: Boolean
+  host_q12e: Boolean
+  host_q12f: Boolean
+  host_q12g: Boolean
+  host_q12h: Boolean
+  host_q12i: Boolean
+  host_q13: String
+  host_q14: String
+  host_q15a: Boolean
+  host_q15b: Boolean
+  host_q15c: Boolean
+  host_q15d: Boolean
+  host_q15e: Boolean
+  host_q15f: Boolean
+  host_q15g: Boolean
+  host_q15h: Boolean
+  host_q15i: Boolean
+  host_q15j: Boolean
+  host_q16: String
+  host_q17: String
+  host_q18: String
+  host_q19: String
+  host_q20: String
+  host_q21a: Boolean
+  host_q21b: Boolean
+  host_q21c: Boolean
+  host_q21d: Boolean
+  host_q21e: Boolean
+  host_q21f: Boolean
+  care_q1a: Boolean
+  care_q1b: Boolean
+  care_q1c: Boolean
+  care_q1d: Boolean
+  care_q1e: Boolean
+  care_q2a: Boolean
+  care_q2b: Boolean
+  care_q2c: Boolean
+  care_q3: String
+  care_q4: String
+  care_q5: String
+  care_q6a: Boolean
+  care_q6b: Boolean
+  care_q6c: Boolean
+  care_q6d: Boolean
+  care_q6e: Boolean
+  care_q6f: Boolean
+  care_q6g: Boolean
+  care_q6h: Boolean
+  care_q6i: Boolean
+  care_q6j: Boolean
+  care_q6k: Boolean
+  care_q6l: Boolean
+  care_q6m: Boolean
+  care_q6n: Boolean
+  care_q7a: Boolean
+  care_q7b: Boolean
+  care_q7c: Boolean
+  care_q7d: Boolean
+  care_q7e: Boolean
+  care_q7f: Boolean
+  care_q7g: Boolean
+  care_q8: String
+  care_q9a: Boolean
+  care_q9b: Boolean
+  care_q9c: Boolean
+  care_q9d: Boolean
+  care_q9e: Boolean
+  care_q10a: Boolean
+  care_q10b: Boolean
+  care_q10c: Boolean
+  care_q10d: Boolean
+  care_q10e: Boolean
+  care_q11: String
+  care_q12a: Boolean
+  care_q12b: Boolean
+  care_q12c: Boolean
+  care_q12d: Boolean
+  care_q12e: Boolean
+  care_q13a: Boolean
+  care_q13b: Boolean
+  care_q13c: Boolean
+  care_q13d: Boolean
+  care_q13e: Boolean
+  care_q13f: Boolean
+  care_q13g: Boolean
+  care_q13h: Boolean
+  care_q13i: Boolean
+  care_q13j: Boolean
+  care_q14a: Boolean
+  care_q14b: Boolean
+  care_q14c: Boolean
+  care_q14d: Boolean
+  care_q14e: Boolean
+  care_q14f: Boolean
+  care_q15: String
+  care_q16a: Boolean
+  care_q16b: Boolean
+  care_q16c: Boolean
+  care_q16d: Boolean
+  care_q16e: Boolean
+  care_q16f: Boolean
+  care_q16g: Boolean
+  care_q16h: Boolean
+  care_q16i: Boolean
+  care_q16j: Boolean
+  care_q17: String
+  care_q18: String
+  care_q19a: Boolean
+  care_q19b: Boolean
+  care_q19c: Boolean
+  care_q19d: Boolean
+  care_q19e: Boolean
+  care_q20a: Boolean
+  care_q20b: Boolean
+  care_q20c: Boolean
+  care_q20d: Boolean
+  care_q20e: Boolean
+  care_q20f: Boolean
+  care_q21: String
+  care_q22: String
+  match1: String
+  match2: String
+  match3: String
+}
+
+type ConversationID @model @auth(rules: [
+  { allow: private, operations: [read] },
+  { allow: groups, groups: ["Admin"] }
+] ){
+  id: ID!
+  host_id: String!
+  caregiver_id: String!
+  active: Boolean
+}
+
+type ConversationMessages @model @auth(rules: [
+  { allow: private, operations: [create, read] },
+  { allow: groups, groups: ["Admin"] }
+] ){
+  id: ID!
+  conversation_id: String!
+  author: String!
+  message: String!
+}
+
+type MailingList @model @auth(rules: [{ allow: public }]) {
+  id: ID!
+  full_name: String!
+  email: String!
+  message: String
+  role_host: Boolean
+  role_care: Boolean
+}

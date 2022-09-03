@@ -1,0 +1,68 @@
+{
+  "permissions": {
+    "auth": {
+      "dreamcare2120dc55": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "api": {
+      "dreamcare": [
+        "Query",
+        "Mutation",
+        "Subscription"
+      ]
+    },
+    "function": {
+      "ddbdetectchange": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "storage": {
+      "s3964b4cdd": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "Profile:@model(appsync)": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "ConversationID:@model(appsync)": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "ConversationMessages:@model(appsync)": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ],
+      "MailingList:@model(appsync)": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": [
+    {
+      "type": "ProjectLayer",
+      "resourceName": "dreamcarelayerstripe",
+      "version": "Always choose latest version",
+      "isLatestVersionSelected": true,
+      "env": "devone"
+    }
+  ]
+}

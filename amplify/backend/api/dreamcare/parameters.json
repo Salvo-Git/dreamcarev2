@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "dreamcare",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authdreamcare2120dc55",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

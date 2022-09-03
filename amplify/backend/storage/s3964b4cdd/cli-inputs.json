@@ -1,0 +1,14 @@
+{
+  "resourceName": "s3964b4cdd",
+  "policyUUID": "964b4cdd",
+  "bucketName": "dreamcare0234094b10cd4ceab9c484ee3d949737",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

@@ -1,0 +1,40 @@
+{
+    "devone": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-dreamcare-devone-214440-authRole",
+            "UnauthRoleArn": "arn:aws:iam::734427167245:role/amplify-dreamcare-devone-214440-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::734427167245:role/amplify-dreamcare-devone-214440-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-dreamcare-devone-214440-deployment",
+            "UnauthRoleName": "amplify-dreamcare-devone-214440-unauthRole",
+            "StackName": "amplify-dreamcare-devone-214440",
+            "StackId": "arn:aws:cloudformation:us-east-1:734427167245:stack/amplify-dreamcare-devone-214440/1aac97f0-1c55-11ed-b812-0ab60a03f8e3",
+            "AmplifyAppId": "d1sgq00xwlz6vh"
+        },
+        "categories": {
+            "auth": {
+                "dreamcare2120dc55": {}
+            },
+            "function": {
+                "ddbdetectchange": {
+                    "deploymentBucketName": "amplify-dreamcare-devone-214440-deployment",
+                    "s3Key": "amplify-builds/ddbdetectchange-7538466a666c37376a45-build.zip"
+                },
+                "retrievestripepayments": {
+                    "deploymentBucketName": "amplify-dreamcare-devone-214440-deployment",
+                    "s3Key": "amplify-builds/retrievestripepayments-4947476f795448555163-build.zip"
+                },
+                "dreamcarelayerstripe": {
+                    "deploymentBucketName": "amplify-dreamcare-devone-214440-deployment",
+                    "s3Key": "amplify-builds/dreamcarelayerstripe-LambdaLayerVersion2e3a5384-build.zip"
+                }
+            },
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1sgq00xwlz6vh",
+                    "type": "manual"
+                }
+            }
+        }
+    }
+}
